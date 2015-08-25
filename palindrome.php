@@ -18,4 +18,20 @@ $input = isset($argv[1]) ? $argv[1] : die("No input given\n");
  *
  * Input: '10101'
  * Output: Yes, '10101' is a palindrome!
+ *
+ * palindrome.php
+ * Daniel Burgner PHP 101
+ * August 26, 2015
  */
+
+$output = '';
+for ($i = (strlen($input) - 1); $i >= 0; --$i) {
+	$output .= $input[$i];
+}
+
+if (strtolower($input) == strtolower($output)) {
+	print "Yes, $input is a palindrome!\n";
+}
+if (strtolower($input) != strtolower($output)) {
+	print "No, $input is not a palindrome!\n";
+}
